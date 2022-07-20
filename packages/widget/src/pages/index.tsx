@@ -1,9 +1,6 @@
 import React from 'react';
 
-import("../../public/rocket/index.js")
-.then((module) => {
-  console.log('成功使用wasm')
-})
+import '../rocket/index.js'
 
 export default function IndexPage() {
    return (

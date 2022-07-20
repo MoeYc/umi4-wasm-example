@@ -5,24 +5,9 @@
   "scripts": {
     "start": "max dev",
     "build": "max build",
-    "postinstall": "max setup",
-    "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
-    "lint": "eslint 'src/**/*.{js,ts,tsx}'",
-    "lint:fix": "eslint 'src/**/*.{js,ts,tsx}' --fix"
-  },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
-  "lint-staged": {
-    "*.{js,jsx,less,md,json}": [
-      "prettier --write"
-    ],
-    "*.ts?(x)": [
-      "prettier --parser=typescript --write"
-    ]
+    "postinstall": "max setup"
   },
   "dependencies": {
-    "@alifd/next": "^1.25.0",
     "ahooks": "^3.0.5",
     "codemirror": "5.42.2",
     "debug": "^4.3.3",
@@ -33,8 +18,7 @@
     "react-dom": "^17.0.0",
     "react-rnd": "^10.3.5",
     "umi-request": "^1.4.0",
-    "xlsx": "^0.18.5",
-    "yorkie": "^2.0.0"
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@umijs/max": "^4.0.4",
@@ -43,7 +27,6 @@
     "babel-plugin-dynamic-import-node": "^2.3.3",
     "default-passive-events": "^2.0.0",
     "eslint": "^6.8.0",
-    "eslint-config-ali": "^8.0.2",
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-react": "^7.9.1",
     "eslint-plugin-react-hooks": "^2.1.2",
