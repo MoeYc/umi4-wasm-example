@@ -1,0 +1,12 @@
+{
+  "version": "independent",
+  "npmClient": "tnpm",
+  "packages": [
+    "packages/widget"
+  ],
+  "command": {
+    "bootstrap": {
+      "npmClientArgs": ["--no-package-lock"]
+    }
+  }
+}

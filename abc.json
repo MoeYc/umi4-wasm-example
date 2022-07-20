@@ -1,0 +1,17 @@
+{
+  "assets": {
+    "type": "command",
+    "command": {
+      "cmd": [
+        "echo ========================= bone setup =========================",
+        "tnpm -v",
+        "tnpm run deps",
+        "chmod +x ./build.sh",
+        "./build.sh",
+        "mv ./dist $BUILD_DEST",
+        "echo ========================= bone build success! ========================="
+      ]
+    }
+  },
+  "nodeVersion":14
+}

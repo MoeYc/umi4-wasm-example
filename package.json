@@ -1,0 +1,39 @@
+{
+  "name": "maliang",
+  "private": true,
+  "scripts": {
+    "boot": "tnpm install; lerna bootstrap --hoist",
+    "build": "lerna run build --stream --concurrency 1",
+    "ci:eslint": "tnpm run eslint",
+    "ci:test": "umi-test --coverage",
+    "clean": "lerna clean --yes && rimraf node_modules",
+    "deleteTrash": "rimraf node_modules/_@types_react@18.0.*",
+    "deps": "tnpm run clean; tnpm run boot;tnpm run deleteTrash",
+    "eslint": "eslint 'packages/**/src/**/*.{js,ts,tsx}' -o ./.ci/eslint.json",
+    "postinstall": "lerna bootstrap --force-local --hoist --nohoist='@types/{react,react-test-renderer}'",
+    "precommit": "lerna run lint",
+    "prepare": "husky install",
+    "pubd": "def p -d",
+    "pubp": "def p",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage && alicov-report .ci"
+  },
+  "jest": {
+    "coverageDirectory": "./.ci/",
+    "coverageReporters": [
+      "json",
+      "lcov"
+    ]
+  },
+  "devDependencies": {
+    "@ali/ci": "^4.42.0",
+    "@types/react": "^17.0.0",
+    "husky": "^7.0.4",
+    "jest-canvas-mock": "^2.4.0",
+    "jest-environment-jsdom": "^26.6.2",
+    "lerna": "^4.0.0",
+    "rimraf": "^2.6.2",
+    "ts-jest": "^28.0.5"
+  },
+  "__npminstall_done": false
+}
