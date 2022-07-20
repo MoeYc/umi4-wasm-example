@@ -1,5 +1,6 @@
 
-
+#
+说明: umi4中使用webAssembly报错问题复现demo, 调用wasm的代码在widget/pages/index line3   
 # 环境配置
 
 <!-- 安装 node、npm、tnpm 安装 learn npm install -g lerna -->
