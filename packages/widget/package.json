@@ -1,0 +1,55 @@
+{
+  "name": "@alife/iot-test-widget",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "max dev",
+    "build": "max build",
+    "postinstall": "max setup",
+    "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
+    "lint": "eslint 'src/**/*.{js,ts,tsx}'",
+    "lint:fix": "eslint 'src/**/*.{js,ts,tsx}' --fix"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "dependencies": {
+    "@alifd/next": "^1.25.0",
+    "ahooks": "^3.0.5",
+    "codemirror": "5.42.2",
+    "debug": "^4.3.3",
+    "jshint": "^2.10.3",
+    "react": "^17.0.0",
+    "react-codemirror2": "5.1.0",
+    "react-color": "^2.19.3",
+    "react-dom": "^17.0.0",
+    "react-rnd": "^10.3.5",
+    "umi-request": "^1.4.0",
+    "xlsx": "^0.18.5",
+    "yorkie": "^2.0.0"
+  },
+  "devDependencies": {
+    "@umijs/max": "^4.0.4",
+    "@umijs/test": "^4.0.4",
+    "@types/debug": "^4.1.7",
+    "babel-plugin-dynamic-import-node": "^2.3.3",
+    "default-passive-events": "^2.0.0",
+    "eslint": "^6.8.0",
+    "eslint-config-ali": "^8.0.2",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-react": "^7.9.1",
+    "eslint-plugin-react-hooks": "^2.1.2",
+    "@typescript-eslint/eslint-plugin": "^3.0.0",
+    "@typescript-eslint/parser": "^3.0.0",
+    "lint-staged": "^10.0.7",
+    "prettier": "^2.5.1"
+  }
+}
